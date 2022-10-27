@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/flatly/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <style>
+      .container {
+        max-width: 500px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-10 text-center">
+        <i class="fa-sharp fa-solid fa-money-bill-transfer"></i> Expense Tracker
+      </h1>
+
+      <!-- Text Fields -->
+      <form action="" id="book-form">
+        <div class="form-group">
+          <label for="amount" class="mt-4">Amount</label>
+          <input type="text" id="amount" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="description" class="mt-4">Description</label>
+          <input type="text" id="description" class="form-control" />
+        </div>
+
+        <div
+          class="form-group d-flex align-items-center justify-content-around mt-4 bg-light p-5 border border-dark rounded"
+          class="mt-4"
+        >
+          <div class="form-check">
+            <label class="form-check-label text-success">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="optradio"
+              />Income
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label text-danger">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="optradio"
+              />Expense
+            </label>
+          </div>
+        </div>
+        <div class="jumbotron bg-light border border-dark rounded mt-4 p-4">
+          <h1 class="display-4 text-center text-success">150 PKR</h1>
+          <hr class="my-4" />
+          <div class="d-flex justify-content-around text-white">
+            <p class="bg-success p-2">Total Income: 200</p>
+            <p class="bg-danger p-2">Total Expense: 50</p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          id="add-book-btn"
+          class="btn btn-primary mt-4 btn-block w-100"
+          onclick="addEntry()"
+        >
+          Add Entry
+        </button>
+      </form>
+
+      <!-- Book Library -->
+      <table class="table table-striped mt-5 text-capitalize">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tbody id="table-body">
+          <tr>
+            <td class="text-success">Income</td>
+            <td>200</td>
+            <td>Fiverr</td>
+            <td>
+              <button type="button" class="btn btn-outline-dark btn-sm">
+                Edit
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-danger">Expense</td>
+            <td>50</td>
+            <td>Shopping</td>
+            <td>
+              <button type="button" class="btn btn-outline-dark btn-sm">
+                Edit
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <script src="./app.js"></script> -->
+  </body>
+</html>
